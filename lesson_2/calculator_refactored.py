@@ -15,7 +15,7 @@ with open('lesson_2/calc_config.json', 'r') as config_file:
     data = json.load(config_file)
     
 def get_param_and_lang(parameter, lang):
-    return data.get(parameter).get(lang)
+    return data.get(lang).get(parameter)
 
 
 user_input = "y"
