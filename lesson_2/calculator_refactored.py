@@ -27,18 +27,18 @@ while user_input != "n":
     prompt(get_param_and_lang("welcome", lang))
 
     prompt(get_param_and_lang("first_number", lang))
-    number1 = input()
+    number1 = float(input())
 
     while invalid_number(number1):
         prompt(get_param_and_lang("num_invalid", lang))
-        number1 = input()
+        number1 = float(input())
 
     prompt(get_param_and_lang("second_number", lang))
-    number2 = input()
+    number2 = float(input())
 
     while invalid_number(number2):
         prompt(get_param_and_lang("num_invalid", lang))
-        number2 = input()
+        number2 = float(input())
 
     prompt(get_param_and_lang("operation", lang))
     operation = input()
@@ -49,13 +49,13 @@ while user_input != "n":
 
     match operation:
         case '1':
-            output = int(number1) + int(number2)
+            output = number1 + number2
         case '2':
-            output = int(number1) - int(number2)
+            output = number1 - number2
         case '3':
-            output = int(number1) * int(number2)
+            output = number1 * number2
         case '4':
-            output = int(number1) / int(number2)
+            output = number1 / number2
 
     prompt(f"The result is {output}")
     print()
